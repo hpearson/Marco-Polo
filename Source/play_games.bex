@@ -1,0 +1,1730 @@
+' Copy your favorite mp3 to the examples folder and name
+' it "play_games 02.mp3" to hear it during the menu select =).
+' Before you compile, make sure you compile both galaxian.bas
+' and chicken_wee.bas as Sega CD Programs. Also make sure the
+' "copy output to project's dir" in the options is selected.
+	randomize timer	
+	option SegaCD
+
+
+
+
+
+ while 1
+	 JoyStickInput=joypad(0)
+	 'AButton
+	 if JoyStickInput = 64 then
+	 	goto StartGame
+	 endif	 
+	 
+	 'BButton
+	 if JoyStickInput = 16 then
+	 	goto Morseteach
+	 endif	 
+	 
+	 'CButton
+	 if JoyStickInput = 32 then
+	 	goto Startofmorse
+	 endif	 	
+ wend
+
+
+
+Morseteach:
+ cls
+ input Question$
+
+returnmorse:
+ Questionlength = Len(Question$)
+ single$=left$(Question$,1)
+ Question$=right$(Question$,Questionlength -1)
+ single=Asc(single$)
+ 
+ select case single
+   case 65:
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 66:
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100 
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 67:
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 68:
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100 
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 69:
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 70:
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 71:
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 72:
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 73:
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 74:
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 75:
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 76:
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 77:
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 78:
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 79:
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 80:
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 81:
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 82:
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 83:
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 84:
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 85:
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 86:
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 87:
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 88:
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 89:
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 90:
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+    exit select
+   case 48:
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+	exit select
+   case 49:
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+	exit select
+   case 50:
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+	exit select
+   case 51:
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+	exit select
+   case 52:
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+	exit select
+   case 53:
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+	exit select
+   case 54:
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+	exit select
+   case 55:
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+	exit select
+   case 56:
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+	exit select
+   case 57:
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+	exit select	
+   case 32:
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 100
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 10
+		psgvol 0,0
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		psgvol 0,10
+		psg 0,2000
+		sleep 20
+		psgvol 0,0
+		sleep 100
+	exit select		
+   case else:
+  end select
+
+ sleep 300
+ if Questionlength > 1 then
+ 	goto returnmorse
+ endif
+
+ 'take them back to the top they are done
+ goto Morseteach
+
+
+Startofmorse:
+	question = rnd(3) + 1
+	
+	
+	if question = 1 then
+		'Press A
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 500
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 500
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 500
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 500
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 500
+		CDPAUSE
+		sleep 100
+		'space 
+		cdplay 2
+		sleep 1000
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 500
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		sleep 100
+			hidden = 1
+			goto enfofmotor
+	endif
+
+	if question = 2 then
+		'Press B
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 500
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 500
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 500
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 500
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 500
+		CDPAUSE
+		sleep 100
+		'space 
+		cdplay 2
+		sleep 1000
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 500
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+			hidden = 2
+			goto enfofmotor
+	endif
+
+	if question = 3 then
+		'Press C
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 500
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 500
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 500
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 500
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 500
+		CDPAUSE
+		sleep 100
+		'space 
+		cdplay 2
+		sleep 1000
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 500
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 200
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+		sleep 200
+		CDPAUSE
+		sleep 100
+		cdplay 2
+		sleep 50
+		CDPAUSE
+		sleep 100
+			hidden = 3
+			goto enfofmotor
+	endif
+
+
+
+
+
+enfofmotor:
+ while 1
+	 JoyStickInput=joypad(0)
+	 
+	 'AButton
+	 if JoyStickInput = 64 then
+	 	if question = 1 then
+		 	cdplay 2
+		 	sleep 3000
+		 	goto Startofmorse:
+		 else
+		 	goto Startofmorse:
+		 endif
+	 endif	
+	 
+	 'BButton
+	 if JoyStickInput = 16 then
+	 	if question = 2 then
+		 	cdplay 2
+		 	sleep 3000
+		 	goto Startofmorse:
+		 else
+		 	goto Startofmorse:
+		 endif
+	 endif
+	 
+	 'CButton will give instructions
+	 if JoyStickInput = 32 then
+	 	if question = 3 then
+		 	cdplay 2
+		 	sleep 3000
+		 	goto Startofmorse:
+		 else
+		 	goto Startofmorse:
+		 endif
+	 endif		
+ wend
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+StartGame:
+ sleep 30
+ CDPAUSE
+
+ who = 0 						   'Start listning their frequency
+ YourSound = 500				   'What you start on
+ TheirSound = 5
+ TheirSound = TheirSound * rnd(200) 'generate their number
+ if TheirSound = 0 then
+ 	TheirSound = 5
+ endif
+ 
+ 
+ 
+ 
+GameLoop:
+ if who = 1 then
+ 	psgvol 0,0
+ 	psgvol 1,10
+ endif
+ 
+ if who = 0 then
+ 	psgvol 0,10
+ 	psgvol 1,0
+ endif
+
+ psg 0,TheirSound
+ psg 1,YourSound
+ 
+ while 1
+	 JoyStickInput=joypad(0)
+	 
+	 'StartButton
+	 if JoyStickInput = 128 then
+	 	goto EndGame
+	 endif
+	 
+	 'UpButton
+	 if JoyStickInput = 257 then
+	 	goto UpButton
+	 endif
+	 
+	 'DownButton
+	 if JoyStickInput = 514 then
+	 	goto DownButton
+	 endif
+	 
+	 'AButton
+	 if JoyStickInput = 64 then
+	 	goto AButton
+	 endif	 
+	 
+	 'CButton
+	 if JoyStickInput = 32 then
+	 	goto CButton
+	 endif	 	
+ wend
+ 
+UpButton:
+ YourSound = YourSound + 5;
+ 'Set input limiters
+ if YourSound > 1000 then
+ 	YourSound = 1000
+ endif	
+ sleep 10
+ goto GameLoop 
+
+DownButton:
+ YourSound = YourSound - 5;
+ if YourSound < 5 then
+	YourSound = 5
+ endif	
+ sleep 10
+ goto GameLoop 
+ 
+AButton:
+ Who = 0
+ goto GameLoop 
+
+CButton:
+ Who = 1
+ goto GameLoop 
+ 
+ 
+ 
+ 
+EndGame: 
+ sleep 30
+ psgvol 0,0
+ psgvol 1,0
+ if YourSound = TheirSound then
+	'win
+	WinCounter = WinCounter + 1
+	goto WinCount
+ else
+ 	'lose
+	LostTheGame = 1
+ 	goto WinCount
+ endif
+ 
+WinCount:
+ 'Will beep out wins
+ WinCounter2 = WinCounter
+ while WinCounter > 0
+ 	psgvol 0,10
+ 	psg 0,2000
+ 	sleep 10
+ 	psgvol 0,0
+ 	sleep 10
+ 	WinCounter = WinCounter - 1
+ wend
+ 'will long beep failure and reset wins
+ WinCounter = WinCounter2
+ sleep 60
+ if LostTheGame = 1 then
+ 	LostTheGame = 0
+ 	WinCounter = 0
+ 	psgvol 0,10
+ 	psg 0,100
+ 	sleep 50
+ 	psgvol 0,0
+ 	sleep 10
+ endif
+ goto StartGame
