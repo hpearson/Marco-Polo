@@ -9,4 +9,5 @@ Macro Polo has three game modes. On startup, the user selects the game mode by p
 Players can learn more code using program B.<br />
 Once the players are familiar with Morse code they can play C a morse code matching game. <br />
 <br ><br />
-The game is programmed in BASIC and is compiled using BasiEgaXorz.
+The game is programmed in BASIC and is compiled using BasiEgaXorz.<br />
+The game has not been debugged.
